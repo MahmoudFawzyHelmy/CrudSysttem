@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css"">
+    <link rel=" stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="w-50 m-auto shadow-lg p-5">
+        <h1 class="text-uppercase">crud product</h1>
+        <input type="text" name="productName" id="productName" class="form-control my-3"
+            placeholder="Enter Product Name">
+        <div class="alert alert-danger text-capitalize" id="alert">invalide name</div>
+        <input type="text" name="productCategory" id="productCategory" class="form-control my-3"
+            placeholder="Enter Product Category">
+        <input type="number" name="productPrice" id="productPrice" class="form-control my-3"
+            placeholder="Enter Product Price">
+        <textarea name="comment" id="productDescription" placeholder="Enter Product Description"
+            class="form-control my-3"></textarea>
+        <button class="btn btn-info text-capitalize" onclick="mainFunc()" id="addBtn">add product</button>
+        <button class="btn btn-success text-capitalize" id="updataBtn" onclick="updateProductValue()">Update
+            product</button>
+        <input type="search" name="searchInput" class="form-control my-3" onkeyup="searchInput(this.value)"
+            placeholder="Search Products.....">
+    </div>
+    <div class="container">
+        <table class="my-4 text-center text-capitalize table ">
+            <thead>
+                <th>index</th>
+                <th>name</th>
+                <th>category</th>
+                <th>price</th>
+                <th>description</th>
+                <th>delete</th>
+                <th>update</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src=" js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
